@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeController" customModule="LoginPage" customModuleProvider="target">
             <connections>
+                <outlet property="toDoList" destination="zW9-Bh-Ti9" id="vFO-y9-VzD"/>
                 <outlet property="view" destination="iN0-l3-epB" id="gHa-Oh-uh9"/>
             </connections>
         </placeholder>
@@ -18,16 +19,24 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QYA-za-SHG">
-                    <rect key="frame" x="146.5" y="437.5" width="121" height="21"/>
+                    <rect key="frame" x="146.5" y="97" width="121" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zW9-Bh-Ti9">
+                    <rect key="frame" x="22" y="168" width="370" height="694"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </tableView>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="zW9-Bh-Ti9" secondAttribute="bottom" id="Ouw-Gi-Wo7"/>
+                <constraint firstItem="zW9-Bh-Ti9" firstAttribute="top" secondItem="QYA-za-SHG" secondAttribute="bottom" constant="50" id="UR3-p3-50n"/>
                 <constraint firstItem="QYA-za-SHG" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Y23-SY-3Ky"/>
-                <constraint firstItem="QYA-za-SHG" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="YZA-wn-hxt"/>
+                <constraint firstItem="QYA-za-SHG" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-340.5" id="YZA-wn-hxt"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="zW9-Bh-Ti9" secondAttribute="trailing" constant="22" id="oew-63-MZ2"/>
+                <constraint firstItem="zW9-Bh-Ti9" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="22" id="yq0-xr-Dxk"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="139" y="113"/>
